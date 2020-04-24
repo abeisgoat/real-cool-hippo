@@ -1,0 +1,84 @@
+name: Do Release
+
+on:
+  push:
+    branches: [ production ]
+  pull_request:
+    branches: [ production ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup "hub"
+      uses: Geertvdc/setup-hub@v1.0.0
+
+    - name: Setup "firebase-tools"
+      run: |
+        curl -Lo ./firebase https://firebase.tools/bin/linux/latest
+        chmod +x ./firebase
+
+    - name: Setup "flutter"
+      uses: subosito/flutter-action@v1.3.0
+      with:
+        flutter-version: 1.17.0-dev.3.1
+        channel: beta
+
+    - name: Setup "dart"
+      run: |
+        wget https://storage.googleapis.com/dart-archive/channels/stable/release/2.7.2/sdk/dartsdk-linux-x64-release.zip -O /tmp/dart.zip
+        unzip /tmp/dart.zip
+
+    - name: Setup "gcloud"
+      uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      with:
+        version: '285.0.0'
+        project_id: ${{ secrets.GCP_PROJECT_ID }}
+        service_account_email: ${{ secrets.GCP_SA_EMAIL }}
+        service_account_key: ${{ secrets.GCP_SA_KEY }}
+        export_default_credentials: true
+
+    - name: Bump version
+      run: |
+        # Find and increment the version number.
+        perl -i -pe 's/^(version:\s+\d+\.\d+\.\d+\+)(\d+)$/$1.($2+1)/e' pubspec.yaml
+        grep 'version: ' pubspec.yaml | sed 's/version: //' > /tmp/version
+
+    - name: Build client
+      run: |
+        flutter config --enable-web
+        flutter pub get
+        flutter build web
+
+    - name: Build server
+      run: |
+        ./dart-sdk/bin/dart2native lib/cli.dart -o cloud_run/cli.exe
+        cd cloud_run
+        gcloud builds submit --tag gcr.io/real-cool-hippo/uppo_app
+        ../firebase is:npm install
+
+    - name: Deploy server
+      run: |
+        gcloud run deploy uppoapp --image gcr.io/real-cool-hippo/uppo_app --platform managed --region us-central1 --allow-unauthenticated --labels version=$version
+
+    - name: Deploy client
+      run: |
+        ./firebase deploy --project=real-cool-hippo --token=$FIREBASE_TOKEN --message=$version
+
+    - name: Release Source Code
+      env:
+        GITHUB_USER: ${{ secrets.GITHUB_USER }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        version=$(cat /tmp/version)
+        git config --global user.email "abeisgreat+hippobot@abeisgreat.com"
+        git config --global user.name "Hippo Bot"
+        git commit -m "Bump version to $version" pubspec.yaml
+        git pull
+        git push origin production:master
+        git push origin production
+
+        hub release create -m "$version" $version

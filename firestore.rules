@@ -1,0 +1,20 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /games/{game_id} {
+      allow read;
+
+      match /statuses/{player_id} {
+        allow read;
+      }
+
+      match /players/{player_id} {
+        allow read;
+      }
+
+      match /private/{player_id} {
+        allow read: if request.auth.uid == player_id;
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+name: uppo
+description: A game about a Real Cool Hippo
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.2+2
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cloud_firestore: ^0.13.2
+  cloud_functions: ^0.4.2
+  firebase_auth: ^0.15.5
+  universal_html: ^1.1.4
+  google_fonts: ^0.3.10
+  flutter_markdown: ^0.3.4
+  url_launcher: ^5.4.2
+  firebase: ^7.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  test: ^1.14.2
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+  assets:
+    - pubspec.yaml
+    - assets/yellow_hippo.png
+    - assets/blue_hippo.png
+    - assets/green_hippo.png
+    - assets/red_hippo.png
+    - assets/background.png
+    - assets/logo.png
+    - assets/signature.png
+    - assets/wild_hippo.png
+    - assets/wild_hippo_red.png
+    - assets/wild_hippo_yellow.png
+    - assets/wild_hippo_blue.png
+    - assets/wild_hippo_green.png
+    - assets/RULES.md
+    - assets/CREDITS.md
+  uses-material-design: true
+#  fonts:
+#    - family: LuckiestGuy
+#      fonts:
+#        - asset: fonts/LuckiestGuy-Regular.ttf
+#
+#    - family: Kalam
+#      fonts:
+#        - asset: fonts/Kalam-Regular.ttf
+#        - asset: fonts/Kalam-Light.ttf
+#        - asset: fonts/Kalam-Bold.ttf

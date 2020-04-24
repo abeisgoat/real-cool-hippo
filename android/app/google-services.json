@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "63048065032",
+    "firebase_url": "https://real-cool-hippo.firebaseio.com",
+    "project_id": "real-cool-hippo",
+    "storage_bucket": "real-cool-hippo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63048065032:android:8da03cf5ced81e87c2f1bd",
+        "android_client_info": {
+          "package_name": "today.abe.flutterapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "63048065032-45rhegqr95lc2k6aca38qsbnpm5u3c4n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcldUiRtv8vyQADL5lSFA90ZM8Yb4WqMg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "63048065032-45rhegqr95lc2k6aca38qsbnpm5u3c4n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

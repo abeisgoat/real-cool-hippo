@@ -274,6 +274,7 @@ class Ruleset {
 
     Map<String, int> scores = {};
     var index = 0;
+    var lastBundleLength = 0;
     playerBundles.forEach((pair) {
       scores[pair.key] = (playerBundles.length - index) * 100;
 
@@ -283,7 +284,14 @@ class Ruleset {
 
       scores[pair.key] =
           (math.max(0, scores[pair.key]) / playerBundles.length).ceil();
-      index += 1;
+
+      var currentBundleLength = pair.value.getCards().length;
+
+      if (currentBundleLength < lastBundleLength) {
+        index += 1;
+      }
+
+      lastBundleLength = currentBundleLength;
     });
 
     return scores;

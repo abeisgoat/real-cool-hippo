@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f0df3ae6-5cca-4541-ae73-d3db43b7cbb7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud_run/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_run/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/widgets/card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/match_making.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/match_making.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +59,7 @@
       <workItem from="1588018530903" duration="41000" />
       <workItem from="1588031832194" duration="266000" />
       <workItem from="1588288819753" duration="13000" />
-      <workItem from="1588534330322" duration="1173000" />
+      <workItem from="1588534330322" duration="1819000" />
     </task>
     <servers />
   </component>

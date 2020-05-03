@@ -141,7 +141,7 @@ class AdvancedCardWidget extends StatelessWidget {
       text = (card as uppo.NumberCard).number.toString();
       faceTexts = [
         Positioned(
-            top: 0 * scale,
+            top: -125 * scale,
             left: -24 * scale,
             right: 0,
             child: Text(text,
@@ -154,7 +154,7 @@ class AdvancedCardWidget extends StatelessWidget {
                         fontSize: 400 * scale,
                         color: Color.fromRGBO(0, 0, 0, 0.1))))),
         Positioned(
-            top: 16 * scale,
+            top: -12 * scale,
             left: 16 * scale,
             child: Text(text,
                 style: google_fonts.GoogleFonts.kalam(
@@ -180,7 +180,7 @@ class AdvancedCardWidget extends StatelessWidget {
 
       faceTexts = [
         Positioned(
-            top: 0 * scale,
+            top: -125 * scale,
             left: -24 * scale,
             right: 0,
             child: Text(text.substring(0, 1),
@@ -193,7 +193,7 @@ class AdvancedCardWidget extends StatelessWidget {
                         fontSize: 400 * scale,
                         color: Color.fromRGBO(0, 0, 0, 0.1))))),
         Positioned(
-            top: 25 * scale,
+            top: 10 * scale,
             left: 0,
             right: 0,
             child: Text(text,
@@ -218,7 +218,7 @@ class AdvancedCardWidget extends StatelessWidget {
 
       faceTexts = [
         Positioned(
-            top: 0 * scale,
+            top: -125 * scale,
             left: -24 * scale,
             right: 0,
             child: Text(text.substring(0, 1),
@@ -231,7 +231,7 @@ class AdvancedCardWidget extends StatelessWidget {
                         fontSize: 400 * scale,
                         color: Color.fromRGBO(0, 0, 0, 0.1))))),
         Positioned(
-            top: 25 * scale,
+            top: 10 * scale,
             left: 0,
             right: 0,
             child: Text(text,

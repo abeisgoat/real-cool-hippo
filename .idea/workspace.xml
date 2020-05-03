@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f0df3ae6-5cca-4541-ae73-d3db43b7cbb7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TODO.md" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/uppo/ruleset.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/uppo/ruleset.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud_run/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloud_run/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/match_making.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/match_making.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +31,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bull_one/lib/localstorage.dart" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -58,7 +60,9 @@
       <workItem from="1587679318822" duration="11152000" />
       <workItem from="1587853907809" duration="751000" />
       <workItem from="1588018530903" duration="41000" />
-      <workItem from="1588031832194" duration="128000" />
+      <workItem from="1588031832194" duration="266000" />
+      <workItem from="1588288819753" duration="13000" />
+      <workItem from="1588534330322" duration="1173000" />
     </task>
     <servers />
   </component>
@@ -66,10 +70,10 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2657" y="386" width="424" height="511" key="FileChooserDialogImpl" timestamp="1588018546611">
+    <state x="2657" y="386" width="424" height="511" key="FileChooserDialogImpl" timestamp="1588534539654">
       <screen x="1920" y="103" width="1920" height="1080" />
     </state>
-    <state x="2657" y="386" width="424" height="511" key="FileChooserDialogImpl/67.27.1853.1053/1920.103.1920.1080@1920.103.1920.1080" timestamp="1588018546611" />
+    <state x="2657" y="386" width="424" height="511" key="FileChooserDialogImpl/67.27.1853.1053/1920.103.1920.1080@1920.103.1920.1080" timestamp="1588534539654" />
     <state x="2296" y="265" width="1157" height="753" key="new project wizard" timestamp="1588018559621">
       <screen x="1920" y="103" width="1920" height="1080" />
     </state>

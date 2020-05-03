@@ -428,9 +428,9 @@ class _MyHomePageState extends State<MyHomePage>
               onConfirm: _quit
             ));
           }),
-          BottomBar.item("Rules", Icons.announcement, onTap: () {
-            ModalSingleton.active.value = Modals.Rules;
-          }),
+//          BottomBar.item("Rules", Icons.announcement, onTap: () {
+//            ModalSingleton.active.value = Modals.Rules;
+//          }),
           _involvement == Involvement.Player
               ? ValueListenableBuilder(
                   valueListenable: drawEffects.lockNotifier,

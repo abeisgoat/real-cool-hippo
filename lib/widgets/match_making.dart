@@ -335,9 +335,9 @@ class _MatchMakingScreenState extends State<MatchMakingScreen> {
       Row(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          BottomBar.item("Rules", Icons.announcement, rounded: true, onTap: () {
-            ModalSingleton.active.value = Modals.Rules;
-          }),
+//          BottomBar.item("Rules", Icons.announcement, rounded: true, onTap: () {
+//            ModalSingleton.active.value = Modals.Rules;
+//          }),
 //          BottomBar.item("Leagues", Icons.folder_shared,
 //              rounded: true, onTap: () {ModalSingleton.active.value = Modals.Leagues;}),
           BottomBar.item("Credits", Icons.info_outline, rounded: true,
